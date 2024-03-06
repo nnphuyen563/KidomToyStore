@@ -34,8 +34,8 @@
     <color name="greyscale_100">#F5F5F5</color>
     <color name="greyscale_50">#FAFAFA</color>
 
-
-
-
+    <!--others-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
 
 </resources>
