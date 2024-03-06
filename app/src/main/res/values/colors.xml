@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!--primary-->
+    <color name="primary_500">#FF9843</color>
+    <color name="primary_400">#FFA447</color>
+    <color name="primary_300">#FFB534</color>
+    <color name="primary_200">#FFEAA7</color>
+    <color name="primary_100">#F9EFCC</color>
+
+    <!--secondary-->
+    <color name="secondary_500">#797979</color>
+    <color name="secondary_400">#949494</color>
+    <color name="secondary_300">#AFAFAF</color>
+    <color name="secondary_200">#C9C9C9</color>
+    <color name="secondary_100">#F2F2F2</color>
+
+    <!--alert and status-->
+    <color name="info">#FFA447</color>
+    <color name="success">#4ADE80</color>
+    <color name="warning">#FACC15</color>
+    <color name="error">#F75555</color>
+    <color name="disabled">#D8D8D8</color>
+    <color name="button_disabled">#FFDD73</color>
+
+    <!--greyscale-->
+    <color name="greyscale_900">#212121</color>
+    <color name="greyscale_800">#424242</color>
+    <color name="greyscale_700">#616161</color>
+    <color name="greyscale_600">#757575</color>
+    <color name="greyscale_500">#9E9E9E</color>
+    <color name="greyscale_400">#BDBDBD</color>
+    <color name="greyscale_300">#E0E0E0</color>
+    <color name="greyscale_200">#EEEEEE</color>
+    <color name="greyscale_100">#F5F5F5</color>
+    <color name="greyscale_50">#FAFAFA</color>
+
+
+
+
+
 </resources>
