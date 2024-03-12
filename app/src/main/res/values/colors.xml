@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--primary-->
-    <color name="primary_500">#FF9843</color>
-    <color name="primary_400">#FFA447</color>
-    <color name="primary_300">#FFB534</color>
-    <color name="primary_200">#FFEAA7</color>
-    <color name="primary_100">#F9EFCC</color>
+    <color name="primary_500">#D12525</color>
+    <color name="primary_400">#E05256</color>
+    <color name="primary_300">#E77478</color>
+    <color name="primary_200">#ED9699</color>
+    <color name="primary_100">#F6CBCC</color>
 
     <!--secondary-->
     <color name="secondary_500">#797979</color>
@@ -15,12 +15,12 @@
     <color name="secondary_100">#DFD9D9</color>
 
     <!--alert and status-->
-    <color name="info">#FFA447</color>
+    <color name="info">#D12525</color>
     <color name="success">#4ADE80</color>
     <color name="warning">#FACC15</color>
     <color name="error">#F75555</color>
     <color name="disabled">#D8D8D8</color>
-    <color name="button_disabled">#FFDD73</color>
+    <color name="button_disabled">#ED9699</color>
 
     <!--greyscale-->
     <color name="greyscale_900">#212121</color>
