@@ -12,7 +12,7 @@
     <color name="secondary_400">#949494</color>
     <color name="secondary_300">#AFAFAF</color>
     <color name="secondary_200">#C9C9C9</color>
-    <color name="secondary_100">#F2F2F2</color>
+    <color name="secondary_100">#DFD9D9</color>
 
     <!--alert and status-->
     <color name="info">#FFA447</color>
