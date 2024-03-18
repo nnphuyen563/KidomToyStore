@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="40dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/custom_bottom_sheet">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarCancelOrder"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="2dp"
+            android:theme="?attr/actionBarTheme"
+            app:menu="@menu/bottom_sheet_cancel_heading"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@drawable/custom_bottom_sheet">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/futura_bold"
+                android:gravity="center"
+                android:text="Đánh giá"
+                android:textColor="@color/orange"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đơn hàng của ba mẹ như thế nào?"
+            android:textSize="20sp"
+            android:textColor="@color/greyscale_900"
+            android:fontFamily="@font/baloopaaji2bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hãy để lại đánh giá và nhận xét của ba mẹ nhé!"
+            android:textSize="14sp"
+            android:textColor="@color/greyscale_700"
+            android:fontFamily="@font/baloopaaji2medium"/>
+
+        <RatingBar
+            android:id="@+id/rtbReviewRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:rating="4"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:stepSize="0.5"
+            android:transformPivotX="5dp"
+            android:theme="@style/RatingBar"
+            android:layout_marginTop="15dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/button_unselected_light_red"
+            android:text="Xác nhận"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_500"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:fontFamily="@font/baloopaaji2bold"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSend"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/button_orange"
+            android:text="Xác nhận"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:fontFamily="@font/baloopaaji2bold"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

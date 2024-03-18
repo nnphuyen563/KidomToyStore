@@ -9,7 +9,7 @@ import android.os.Bundle;
 import com.google.android.material.tabs.TabLayout;
 import com.group4.kidomtoystore.Adapters.ViewPagerAdapter;
 
-public class orders extends AppCompatActivity {
+public class Orders extends AppCompatActivity {
     private TabLayout tablayout;
     private ViewPager viewpager;
 
