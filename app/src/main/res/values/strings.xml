@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Kidom Toy Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="preparing_order_fragment">Chờ xác nhận</string>
+    <string name="ship_order_fragment">Chờ giao</string>
+    <string name="delivering_order_fragment">Đang giao</string>
+    <string name="review_order_fragment">Đánh giá</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
