@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_marginLeft="10sp"
+    android:layout_marginRight="10sp">
+
+    <ImageView
+        android:id="@+id/imvCategory"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:src="@drawable/img_category_bupbe"
+        />
+    <TextView
+        android:id="@+id/txtCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Búp bê"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:fontFamily="@font/baloopaaji2semibold"/>
+
+</LinearLayout>

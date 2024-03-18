@@ -4,43 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePageFull"
+    tools:context=".Activities.HomePageFull"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="15dp"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/search_corner_16"
+        android:background="@drawable/input_field"
         android:orientation="horizontal"
         >
         <EditText
+            android:id="@+id/edtSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
+            android:fontFamily="@font/baloopaaji2regular"
+            android:layout_weight="1"
             android:hint="Nhập ngay mã BANMOI để giảm 10%"
             android:lineBreakWordStyle="none"
             android:padding="21sp"
             android:backgroundTint="@android:color/transparent"
             />
         <ImageView
+            android:id="@+id/imvSearch"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/ic_search"
             />
         <ImageView
+            android:id="@+id/imvFilter"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/ic_filter"
             android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
             />
-    </LinearLayout><LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/search_corner_16"
-    android:orientation="horizontal"
-    >
-</LinearLayout>
+    </LinearLayout>
+<!--    <GridView-->
+<!--        android:id="@+id/gvCategory"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:numColumns="5"-->
+<!--        android:layout_marginTop="10sp"-->
+<!--        android:layout_marginBottom="10sp"/>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đề xuất"
+            android:textSize="14sp"
+            android:fontFamily="@font/baloopaaji2bold"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xem tất cả"
+            android:textSize="14sp"
+            android:fontFamily="@font/baloopaaji2bold"
+
+            android:textStyle="bold"
+            android:textColor="@color/primary_500"/>
+
+    </LinearLayout>
 
 
 
