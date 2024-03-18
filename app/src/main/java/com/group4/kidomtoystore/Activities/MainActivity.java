@@ -1,8 +1,10 @@
-package com.group4.kidomtoystore;
+package com.group4.kidomtoystore.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.group4.kidomtoystore.R;
 
 public class MainActivity extends AppCompatActivity {
 
