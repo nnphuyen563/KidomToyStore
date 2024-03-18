@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.group4.kidomtoystore.R;
 
-public class IntroActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.intro_main);
+        setContentView(R.layout.activity_main);
     }
 }
