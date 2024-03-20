@@ -27,7 +27,7 @@ public class BannerHomeAdapter extends RecyclerView.Adapter<BannerHomeAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.banner_home_layout,parent,false);
+        View view = inflater.inflate(R.layout.item_banner,parent,false);
         return new ViewHolder(view);
     }
 

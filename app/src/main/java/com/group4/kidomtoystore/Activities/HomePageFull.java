@@ -44,6 +44,7 @@ public class HomePageFull extends AppCompatActivity {
 //        binding.rvCategory.setHasFixedSize(true);
         LinearLayoutManager layoutManager2 = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         binding.rvBanner.setLayoutManager(layoutManager2);
+        binding.rvBanner.setHasFixedSize(true);
     }
 
     private void initData() {
