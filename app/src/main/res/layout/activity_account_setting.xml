@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AccountSettingActivity"
+    android:padding="24dp"
+    android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tài khoản của tôi"
+            android:fontFamily="@font/baloopaaji2bold"
+            android:textSize="24sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imvProfilePhoto"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/profile_photo_woman"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nguyễn Hồng Ngọc Ánh"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:textSize="24sp"/>
+<!--        Sau này tìm cách link với tên tài hoản người dùng-->
+    <TextView
+        android:id="@+id/txtProfilePhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0344205593"
+        android:layout_gravity="center"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp"/>
+
+<!--    Thông tin của tôi: PersonalInfo-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/llPersonalInfo">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_person" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="10"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Thông tin của tôi"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more" />
+    </LinearLayout>
+
+<!--Địa  chỉ của tôi - Address-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/llAddress">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_person" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="10"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Địa chỉ của tôi"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more" />
+    </LinearLayout>
+
+<!--    Thẻ thanh toán:; PaymentCard-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/llPaymentCard">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_person" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="10"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Thẻ thanh toán"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more" />
+    </LinearLayout>
+
+<!--    Ngôn ngữ: ChangeLanguage-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/llChangeLanguage">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_person" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="10"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Ngôn ngữ"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more" />
+    </LinearLayout>
+
+<!--    Chế độ tối: DarkMode-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/llDarkMode">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_person" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="10"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Chế độ tối"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more" />
+    </LinearLayout>
+
+<!--    Đổi mật khẩu: ChangePassword-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/llChangePassword">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_person" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="10"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Đổi mật khẩu"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more" />
+    </LinearLayout>
+
+<!--    Chính sách: Policy-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/llPolicy">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_person" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="10"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Chính sách"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more" />
+    </LinearLayout>
+
+<!--    Trung tâm hỗ trợ: SupportCenter-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/llSupportCenter">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_person" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="10"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Trung tấm hỗ trợ"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more" />
+    </LinearLayout>
+
+<!--    Đăng xuất: LogOut-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/llChangeLanguage">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_person" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="10"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Đăng xuất"
+            android:textSize="18sp"
+            android:textColor="@color/error" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more" />
+    </LinearLayout>
+
+
+</LinearLayout>
