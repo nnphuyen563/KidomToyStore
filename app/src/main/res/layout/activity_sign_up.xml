@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.LoginActivity"
+    tools:context=".Activities.SignUpActivity"
     android:orientation="vertical"
     android:padding="24dp">
 
@@ -18,12 +18,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/str_login"
+        android:text="@string/str_signup"
         android:fontFamily="@font/baloopaaji2bold"
         android:textSize="32sp"
         android:layout_gravity="center"
         android:layout_marginBottom="24dp"/>
-    
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,32 +72,22 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnLogIn"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="58dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="20sp"
         android:backgroundTint="@color/button_disabled"
-        android:text="@string/str_login"
+        android:text="@string/str_DangKy"
         android:fontFamily="@font/baloopaaji2bold"
         android:textSize="20sp"/>
 
-    <TextView
-        android:id="@+id/txtForgetPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/str_forgotpw"
-        android:gravity="center"
-        android:fontFamily="@font/baloopaaji2semibold"
-        android:textSize="18sp"
-        android:textColor="@color/primary_500"
-        android:layout_marginTop="12sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:layout_marginTop="20sp">
+        android:layout_marginTop="64dp">
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
@@ -164,9 +154,10 @@
             android:id="@+id/txtSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/str_DangKy"
+            android:text="@string/str_login"
             android:fontFamily="@font/baloopaaji2semibold"
             android:textColor="@color/primary_500"/>
     </LinearLayout>
+
 
 </LinearLayout>
