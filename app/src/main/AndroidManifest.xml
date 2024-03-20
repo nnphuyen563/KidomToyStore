@@ -16,6 +16,12 @@
             android:name=".Activities.SignUpActivity"
             android:exported="false" />
         <activity
+            android:name=".Activities.AccountSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AccountActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.MainActivity"
             android:exported="false" />
         <activity
