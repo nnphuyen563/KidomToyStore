@@ -1,52 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="40dp">
+    android:background="@drawable/bottom_sheet"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đánh giá"
+            android:textSize="24sp"
+            android:textColor="@color/greyscale_900"
+            android:fontFamily="@font/baloopaaji2bold"
+            android:gravity="center"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="15dp"
+        android:id="@+id/layoutItemReview">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:cardCornerRadius="25dp"
+            android:elevation="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewDetail"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="10dp"
+                    android:elevation="2dp"
+                    app:cardCornerRadius="20dp">
+                    <ImageView
+                        android:id="@+id/imvReviewThumb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/txtReviewName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tên sản phẩm"
+                        android:textColor="@color/greyscale_900"
+                        android:textSize="16sp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/baloopaaji2bold"/>
+
+                    <TextView
+                        android:id="@+id/txtReviewQty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Số lượng:"
+                        android:textColor="@color/greyscale_700"
+                        android:textSize="12sp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/baloopaaji2medium"/>
+
+                    <TextView
+                        android:id="@+id/txtReviewStatus"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/primary_500"
+                        android:textSize="10sp"
+                        android:text="Hoàn thành"
+                        android:layout_gravity="start"
+                        android:background="@drawable/button_status_order"
+                        android:fontFamily="@font/baloopaaji2semibold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/txtReviewPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="đ180.000"
+                        android:textColor="@color/primary_500"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/baloopaaji2bold"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/custom_bottom_sheet">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarCancelOrder"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:elevation="2dp"
-            android:theme="?attr/actionBarTheme"
-            app:menu="@menu/bottom_sheet_cancel_heading"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            android:background="@drawable/custom_bottom_sheet">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/futura_bold"
-                android:gravity="center"
-                android:text="Đánh giá"
-                android:textColor="@color/orange"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </androidx.appcompat.widget.Toolbar>
-
+        android:paddingHorizontal="24dp">
+        
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Đơn hàng của ba mẹ như thế nào?"
             android:textSize="20sp"
             android:textColor="@color/greyscale_900"
-            android:fontFamily="@font/baloopaaji2bold"/>
+            android:fontFamily="@font/baloopaaji2bold"
+            android:gravity="center"
+            android:layout_marginTop="15dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hãy để lại đánh giá và nhận xét của ba mẹ nhé!"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textColor="@color/greyscale_700"
-            android:fontFamily="@font/baloopaaji2medium"/>
+            android:fontFamily="@font/baloopaaji2medium"
+            android:gravity="center" />
 
         <RatingBar
             android:id="@+id/rtbReviewRating"
@@ -55,38 +133,64 @@
             android:isIndicator="false"
             android:numStars="5"
             android:rating="4"
-            android:scaleX="0.6"
-            android:scaleY="0.6"
             android:stepSize="0.5"
-            android:transformPivotX="5dp"
-            android:theme="@style/RatingBar"
-            android:layout_marginTop="15dp" />
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnCancel"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/button_unselected_light_red"
-            android:text="Xác nhận"
-            android:textSize="16sp"
-            android:textAllCaps="false"
-            android:textColor="@color/primary_500"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:fontFamily="@font/baloopaaji2bold"/>
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnSend"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/button_orange"
-            android:text="Xác nhận"
-            android:textSize="16sp"
-            android:textAllCaps="false"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:fontFamily="@font/baloopaaji2bold"/>
+            android:progressDrawable="@drawable/custom_star"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:background="@drawable/input_field_chosen"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giao hàng nhanh, đóng gói cẩn thận!"
+                android:textSize="14sp"
+                android:textColor="@color/greyscale_900"
+                android:fontFamily="@font/baloopaaji2semibold"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_img"
+                android:background="@android:color/transparent"
+                android:paddingRight="15dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_weight="0">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                android:layout_width="170dp"
+                android:layout_height="56dp"
+                android:background="@drawable/button_unselected_light_red"
+                android:text="Hủy"
+                android:textSize="19sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_500"
+                android:fontFamily="@font/baloopaaji2bold" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSend"
+                android:layout_width="170dp"
+                android:layout_height="56dp"
+                android:background="@drawable/button_orange"
+                android:text="Gửi"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:fontFamily="@font/baloopaaji2bold"
+                android:layout_marginStart="20dp" />
+        </LinearLayout>
+
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</LinearLayout>

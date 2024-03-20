@@ -44,13 +44,15 @@
             android:fontFamily="@font/baloopaaji2medium"/>
         <TextView
             android:id="@+id/txtStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
             android:textSize="10sp"
             android:text="Đang vận chuyển"
             android:textColor="@color/primary_500"
             android:layout_marginTop="5dp"
-            android:fontFamily="@font/baloopaaji2semibold"/>
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:background="@drawable/button_status_order"
+            android:gravity="center"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

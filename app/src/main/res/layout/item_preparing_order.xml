@@ -64,16 +64,16 @@
 
                 <TextView
                     android:id="@+id/txtPreparingStatus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
                     android:layout_marginTop="5dp"
                     android:textColor="@color/primary_500"
                     android:textSize="10sp"
                     android:text="Chờ xác nhận"
                     android:layout_gravity="start"
-                    android:background="@drawable/button_unselected_light_red"
-                    android:padding="5dp"
-                    android:fontFamily="@font/baloopaaji2semibold"/>
+                    android:background="@drawable/button_status_order"
+                    android:fontFamily="@font/baloopaaji2semibold"
+                    android:gravity="center"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
