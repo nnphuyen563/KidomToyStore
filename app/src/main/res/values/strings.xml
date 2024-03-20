@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Kidom Toy Store</string>
+    <string name="str_phone">Số điện thoại</string>
+    <string name="str_password">Mật khẩu</string>
+    <string name="str_login">Đăng nhập</string>
+    <string name="str_forgotpw">Quên mật khẩu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="preparing_order_fragment">Chờ xác nhận</string>
     <string name="ship_order_fragment">Chờ giao</string>

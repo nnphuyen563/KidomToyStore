@@ -19,9 +19,6 @@
             android:name=".Activities.Order"
             android:exported="false" />
         <activity
-            android:name=".Orders"
-            android:exported="false" />
-        <activity
             android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>

@@ -24,7 +24,7 @@
                 android:elevation="2dp"
                 app:cardCornerRadius="20dp">
                 <ImageView
-                    android:id="@+id/imvPreparingThumb"
+                    android:id="@+id/imvDeliveringThumb"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitCenter"
@@ -41,7 +41,7 @@
                 android:orientation="vertical"
                 android:gravity="center_vertical">
                 <TextView
-                    android:id="@+id/txtPreparingName"
+                    android:id="@+id/txtDeliveringName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tên sản phẩm"
@@ -51,7 +51,7 @@
                     android:fontFamily="@font/baloopaaji2bold"/>
 
                 <TextView
-                    android:id="@+id/txtPreparingQty"
+                    android:id="@+id/txtDeliveringQty"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -62,7 +62,7 @@
                     android:fontFamily="@font/baloopaaji2medium"/>
 
                 <TextView
-                    android:id="@+id/txtPreparingStatus"
+                    android:id="@+id/txtDeliveringStatus"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="5dp"
@@ -83,7 +83,7 @@
                     android:gravity="center_vertical">
 
                     <TextView
-                        android:id="@+id/txtPreparingPrice"
+                        android:id="@+id/txtDeliveringPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start"
@@ -94,7 +94,7 @@
                         android:fontFamily="@font/baloopaaji2bold"/>
 
                     <Button
-                        android:id="@+id/btnPreparingDetail"
+                        android:id="@+id/btnDeliveringDetail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/primary_500"
