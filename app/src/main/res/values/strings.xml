@@ -6,4 +6,5 @@
     <string name="str_forgotpw">Quên mật khẩu</string>
     <string name="str_signup">Đăng ký tài khoản</string>
     <string name="str_DangKy">Đăng ký</string>
+    <string name="str_email">Email</string>
 </resources>
