@@ -8,12 +8,23 @@
     android:padding="24dp"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<!--        Sua thanh ic logo home-->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_profile"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tài khoản của tôi"
             android:fontFamily="@font/baloopaaji2bold"
-            android:textSize="24sp"/>
+            android:textSize="24sp"
+            android:textColor="@color/greyscale_900"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,11 +32,11 @@
         android:orientation="vertical">
         <ImageView
             android:id="@+id/imvProfilePhoto"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:src="@drawable/profile_photo_woman"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="20dp"/>
     </LinearLayout>
 
     <TextView
@@ -36,7 +47,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/baloopaaji2bold"
-        android:textSize="24sp"/>
+        android:textSize="24sp"
+        android:textColor="@color/greyscale_900"/>
 <!--        Sau này tìm cách link với tên tài hoản người dùng-->
     <TextView
         android:id="@+id/txtProfilePhoneNumber"
@@ -46,268 +58,250 @@
         android:layout_gravity="center"
         android:fontFamily="@font/baloopaaji2bold"
         android:textSize="14sp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/greyscale_900"/>
 
 <!--    Thông tin của tôi: PersonalInfo-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/llPersonalInfo">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_person" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_profile"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Thông tin của tôi"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:text="Thông tin của tôi"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
         <ImageView
             android:layout_width="15dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_more" />
+            android:src="@drawable/ic_more"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
 <!--Địa  chỉ của tôi - Address-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/llAddress">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_person" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_address"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Địa chỉ của tôi"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:text="Địa chỉ của tôi"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
         <ImageView
             android:layout_width="15dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_more" />
+            android:src="@drawable/ic_more"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
 <!--    Thẻ thanh toán:; PaymentCard-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/llPaymentCard">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_person" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_wallet"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Thẻ thanh toán"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:text="Thẻ thanh toán"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
         <ImageView
             android:layout_width="15dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_more" />
+            android:src="@drawable/ic_more"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
 <!--    Ngôn ngữ: ChangeLanguage-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/llChangeLanguage">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_person" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_language"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Ngôn ngữ"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:text="Ngôn ngữ"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
         <ImageView
             android:layout_width="15dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_more" />
+            android:src="@drawable/ic_more"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
 <!--    Chế độ tối: DarkMode-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/llDarkMode">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_person" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_show"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Chế độ tối"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:text="Chế độ tối"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
         <ImageView
             android:layout_width="15dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_more" />
+            android:src="@drawable/ic_more"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
 <!--    Đổi mật khẩu: ChangePassword-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/llChangePassword">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_person" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_unlock"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Đổi mật khẩu"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:text="Đổi mật khẩu"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
         <ImageView
             android:layout_width="15dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_more" />
+            android:src="@drawable/ic_more"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
 <!--    Chính sách: Policy-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/llPolicy">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_person" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_policy"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Chính sách"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:text="Chính sách"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
         <ImageView
             android:layout_width="15dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_more" />
+            android:src="@drawable/ic_more"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
 <!--    Trung tâm hỗ trợ: SupportCenter-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/llSupportCenter">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_person" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_info"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Trung tâm hỗ trợ"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:text="Trung tấm hỗ trợ"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
         <ImageView
             android:layout_width="15dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_more" />
+            android:src="@drawable/ic_more"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
 <!--    Đăng xuất: LogOut-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/llChangeLanguage">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_person" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_logout"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Đăng xuất"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:text="Đăng xuất"
             android:textSize="18sp"
-            android:textColor="@color/error" />
+            android:textColor="@color/error"/>
         <ImageView
             android:layout_width="15dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_more" />
+            android:src="@drawable/ic_more"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
 
