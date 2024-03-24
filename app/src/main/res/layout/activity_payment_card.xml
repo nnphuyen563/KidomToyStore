@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PaymentCardActivity"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tlPaymentCard"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_back"
+        app:contentInsetStartWithNavigation="0dp"
+        android:elevation="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thẻ thanh toán"
+            android:fontFamily="@font/baloopaaji2bold"
+            android:textColor="@color/greyscale_900"
+            android:textSize="24sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+<!--Payment Card-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/mb_bank"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="30dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MBBank"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/baloopaaji2bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thanh toán trực tiếp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/baloopaaji2semibold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="30dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số thẻ/ Tài khoản"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/baloopaaji2bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="••• •••• •••• •••• 0138"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/baloopaaji2bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+<!--Transaction History-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="24sp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Lịch sử giao dịch"
+            android:textSize="20sp"
+            android:textColor="@color/greyscale_900"
+            android:fontFamily="@font/baloopaaji2bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/txtAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tất cả"
+            android:textSize="16sp"
+            android:textColor="@color/primary_500"
+            android:fontFamily="@font/baloopaaji2bold"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24sp">
+        <ImageView
+            android:id="@+id/imvThumb"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_person"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên sản phẩm"
+                android:textSize="16sp"
+                android:fontFamily="@font/baloopaaji2bold"
+                android:textColor="@color/greyscale_900"
+                android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15/03/2024"
+                    android:textSize="14sp"
+                    android:textColor="@color/greyscale_700"
+                    android:fontFamily="@font/baloopaaji2medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    android:textSize="14sp"
+                    android:textColor="@color/greyscale_700"
+                    android:fontFamily="@font/baloopaaji2medium"
+                    android:layout_marginHorizontal="3dp"/>
+                <TextView
+                    android:id="@+id/txtHour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:00 AM"
+                    android:textSize="14sp"
+                    android:textColor="@color/greyscale_700"
+                    android:fontFamily="@font/baloopaaji2medium"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-220.000"
+                android:textSize="16sp"
+                android:textColor="@color/primary_500"
+                android:fontFamily="@font/baloopaaji2bold"
+                android:layout_gravity="end"/>
+            <TextView
+                android:id="@+id/txtCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Từ MB *0138"
+                android:textSize="14sp"
+                android:textColor="@color/greyscale_700"
+                android:fontFamily="@font/baloopaaji2medium"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

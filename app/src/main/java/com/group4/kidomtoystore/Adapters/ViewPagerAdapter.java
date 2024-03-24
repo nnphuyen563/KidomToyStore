@@ -13,17 +13,16 @@ import com.group4.kidomtoystore.Fragments.PreparingOrderFragment;
 import com.group4.kidomtoystore.Fragments.ReviewOrderFragment;
 import com.group4.kidomtoystore.Fragments.ShipOrderFragment;
 
-public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+public class ViewPagerAdapter extends FragmentStateAdapter {
 
-
-    public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
-        super(fm, behavior);
+    public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
+        super(fragmentActivity);
     }
 
     @NonNull
     @Override
-    public Fragment getItem(int position) {
-        switch (position) {
+    public Fragment createFragment(int position) {
+        switch(position){
             case 0:
                 return new PreparingOrderFragment();
             case 1:
@@ -39,28 +38,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     }
 
     @Override
-    public int getCount() {
-        return 4;
-    }
-
-    @Nullable
-    @Override
-    public CharSequence getPageTitle(int position) {
-        String title = "";
-        switch (position) {
-            case 0:
-                title = "Chờ xác nhận";
-                break;
-            case 1:
-                title = "Chờ giao";
-                break;
-            case 2:
-                title = "Đang giao";
-                break;
-            case 3:
-                title = "Đánh giá";
-                break;
-        }
-        return title;
+    public int getItemCount() {
+        return 3;
     }
 }

@@ -12,11 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:navigationIcon="@drawable/ic_action_back"
         app:contentInsetStartWithNavigation="0dp"
         android:layout_marginBottom="0dp"
         android:elevation="5dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        app:navigationIcon="@drawable/ic_back">
 
         <TextView
             android:layout_width="match_parent"
