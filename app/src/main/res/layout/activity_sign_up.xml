@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SignUpActivity"
+    android:padding="24dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_signup"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:textSize="24sp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_person"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtFullName"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/input_field"
+        android:hint="Họ và tên"
+        android:fontFamily="@font/baloopaaji2regular"
+        android:textSize="19sp"
+        android:paddingStart="20dp"
+        android:textColorHint="@color/greyscale_500"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/input_field"
+        android:hint="@string/str_phone"
+        android:fontFamily="@font/baloopaaji2regular"
+        android:textSize="19sp"
+        android:paddingStart="20dp"
+        android:textColorHint="@color/greyscale_500"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/input_field"
+        android:hint="@string/str_email"
+        android:fontFamily="@font/baloopaaji2regular"
+        android:textSize="19sp"
+        android:paddingStart="20dp"
+        android:textColorHint="@color/greyscale_500"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/edtDOB"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/input_field"
+        android:hint="Ngày sinh"
+        android:fontFamily="@font/baloopaaji2regular"
+        android:textSize="19sp"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="@color/greyscale_500"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:inputType="date"
+        android:drawableRight="@drawable/ic_calendar"
+        android:drawableTint="@color/greyscale_500"/>
+
+
+    <Spinner
+        android:id="@+id/spGender"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:theme="@style/mySpinnerItemStyle"
+        android:background="@drawable/input_field"
+        android:paddingStart="20dp"
+        android:spinnerMode="dropdown"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@null"
+            android:background="@drawable/button_disable"
+            android:text="Tiếp tục"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:fontFamily="@font/baloopaaji2bold"
+            android:layout_gravity="center_horizontal|center"/>
+    </LinearLayout>
+
+</LinearLayout>
