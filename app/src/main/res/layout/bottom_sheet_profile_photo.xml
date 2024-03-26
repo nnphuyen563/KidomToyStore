@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_bg"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="38dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@color/greyscale_300"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Chọn ảnh từ"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:textColor="@color/error"/>
+
+    <LinearLayout
+        android:id="@+id/bsCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_camera" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Mở Camera"
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"
+            android:fontFamily="@font/baloopaaji2bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bsGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_category" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Thư viện ảnh"
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"
+            android:fontFamily="@font/baloopaaji2bold"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

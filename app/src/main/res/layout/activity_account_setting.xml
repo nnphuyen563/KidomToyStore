@@ -15,29 +15,38 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_profile"
+            android:src="@drawable/logo_kidom_house"
             android:layout_gravity="center_vertical"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:text="Tài khoản của tôi"
             android:fontFamily="@font/baloopaaji2bold"
             android:textSize="24sp"
             android:textColor="@color/greyscale_900"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:id="@+id/flUpdatePhoto"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
         <ImageView
-            android:id="@+id/imvProfilePhoto"
+            android:id="@+id/imvPhoto"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:src="@drawable/profile_photo_woman"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"/>
-    </LinearLayout>
+            android:scaleType="fitXY" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_edit_v2"
+            android:layout_gravity="bottom|end"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
 
     <TextView
         android:id="@+id/txtProfileName"
@@ -58,14 +67,18 @@
         android:layout_gravity="center"
         android:fontFamily="@font/baloopaaji2bold"
         android:textSize="14sp"
-        android:layout_marginBottom="10dp"
         android:textColor="@color/greyscale_900"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+    android:background="@color/greyscale_200"/>
 <!--    Thông tin của tôi: PersonalInfo-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_height="wrap_content">
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -74,7 +87,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:text="Thông tin của tôi"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
@@ -101,7 +114,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:text="Địa chỉ của tôi"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
@@ -128,7 +141,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:text="Thẻ thanh toán"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
@@ -155,7 +168,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:text="Ngôn ngữ"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
@@ -182,7 +195,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:text="Chế độ tối"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
@@ -209,7 +222,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:text="Đổi mật khẩu"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
@@ -236,7 +249,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:text="Chính sách"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
@@ -263,7 +276,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:text="Trung tâm hỗ trợ"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"
@@ -290,7 +303,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:text="Đăng xuất"
             android:layout_weight="10"
             android:fontFamily="@font/baloopaaji2semibold"

@@ -13,16 +13,22 @@
         android:theme="@style/Theme.KidomToyStore"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.UpdatePhotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.HelpCenterActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.AccountSettingActivity"
+            android:name=".Activities.MainActivity"
             android:exported="false" />
         <activity
             android:name=".Activities.AccountActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.MainActivity"
+            android:name=".Activities.AccountSettingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

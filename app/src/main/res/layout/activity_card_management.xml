@@ -89,13 +89,24 @@
             android:textColor="@color/greyscale_900"/>
     </LinearLayout>
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Thêm thẻ mới"
-        android:backgroundTint="@color/primary_500"
-        android:layout_gravity="end"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@null"
+            android:background="@drawable/button_available"
+            android:text="Thêm thẻ mới"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/baloopaaji2bold"
+            android:layout_gravity="center_horizontal|center"/>
+    </LinearLayout>
 
 
 
