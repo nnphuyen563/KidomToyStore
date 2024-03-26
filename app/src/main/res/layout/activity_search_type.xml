@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SearchTypeActivity"
+    android:padding="24dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_field"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        >
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/baloopaaji2regular"
+            android:layout_weight="1"
+            android:hint="Nhập ngay mã BANMOI để giảm 10%"
+            android:lineBreakWordStyle="none"
+            android:padding="21sp"
+            android:backgroundTint="@android:color/transparent"
+            />
+        <ImageView
+            android:id="@+id/imvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_search"
+            />
+        <ImageView
+            android:id="@+id/imvFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_filter"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gần đây"
+            android:textSize="20sp"
+            android:fontFamily="@font/baloopaaji2bold"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xoá lịch sử tìm kiếm"
+            android:textSize="16sp"
+            android:fontFamily="@font/baloopaaji2bold"
+            android:textStyle="bold"
+            android:textColor="@color/primary_500"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/greyscale_200"
+        android:layout_marginBottom="24dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cầu trượt cho bé tại nhà"
+            android:fontFamily="@font/baloopaaji2medium"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clost"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Búp bê"
+            android:fontFamily="@font/baloopaaji2medium"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clost"/>
+    </LinearLayout>
+
+</LinearLayout>

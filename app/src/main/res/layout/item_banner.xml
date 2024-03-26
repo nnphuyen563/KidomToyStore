@@ -2,12 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
-
-    <ImageView
-        android:id="@+id/imvBanner"
-        android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/img_banner" />
+        app:cardCornerRadius="14sp">
+        <ImageView
+            android:id="@+id/imvBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_banner" />
+    </androidx.cardview.widget.CardView>
+
+
 
 </LinearLayout>

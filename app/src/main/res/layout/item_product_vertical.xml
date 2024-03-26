@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16sp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/imvProductThumb"
+                android:layout_width="182dp"
+                android:layout_height="182dp"
+                android:src="@drawable/img_category_hoatrang"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:id="@+id/txtProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bộ đồ chơi Kendama"
+                android:textSize="18sp"
+                android:fontFamily="@font/baloopaaji2bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star"/>
+                <TextView
+                    android:id="@+id/txtStarNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.8"
+                    android:fontFamily="@font/baloopaaji2medium"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    android:fontFamily="@font/baloopaaji2medium"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:background="@drawable/button_border_new"
+                    android:layout_marginStart="12sp"
+
+                    >
+                    <TextView
+                        android:id="@+id/txtSoldNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1234"
+                        android:fontFamily="@font/baloopaaji2semibold"
+                        android:textSize="10sp"
+                        android:layout_gravity="center_vertical"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Đã bán"
+                        android:fontFamily="@font/baloopaaji2semibold"
+                        android:textSize="10sp"
+                        android:layout_marginStart="4dp"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="182000đ"
+                android:fontFamily="@font/baloopaaji2semibold"
+                android:textSize="18dp"
+                android:textColor="@color/primary_500"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
