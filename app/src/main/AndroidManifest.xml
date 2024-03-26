@@ -13,18 +13,6 @@
         android:theme="@style/Theme.KidomToyStore"
         tools:targetApi="31">
         <activity
-            android:name=".Activities.CardNew"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.CardManagement"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.AddressNewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.AdressActivity"
-            android:exported="false" />
-        <activity
             android:name=".Activities.SignUpActivity"
             android:exported="false" />
         <activity

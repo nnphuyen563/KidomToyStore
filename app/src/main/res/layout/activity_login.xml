@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LoginActivity"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo_kidom"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_login"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:textSize="32sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/black"/>
+    
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="@color/greyscale_500"
+        android:hint="@string/str_phone"
+        android:textColorHint="@color/greyscale_500"
+        android:fontFamily="@font/baloopaaji2regular"
+        android:textSize="19sp"
+        app:boxStrokeWidth="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtInputPhoneNumb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/input_field"
+            android:inputType="phone"
+            android:textSize="19sp"
+            android:fontFamily="@font/baloopaaji2regular"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_password"
+        app:startIconTint="@color/greyscale_500"
+        android:hint="@string/str_password"
+        android:textColorHint="@color/greyscale_500"
+        android:fontFamily="@font/baloopaaji2regular"
+        android:textSize="19sp"
+        app:boxStrokeWidth="0dp"
+        android:layout_marginTop="20sp"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/greyscale_500">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtInputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/input_field"
+            android:inputType="textPassword"
+            android:textSize="19sp"
+            android:fontFamily="@font/baloopaaji2regular"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="20sp"
+        android:backgroundTint="@null"
+        android:background="@drawable/button_disable"
+        android:text="@string/str_login"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txtForgetPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_forgotpw"
+        android:gravity="center"
+        android:fontFamily="@font/baloopaaji2semibold"
+        android:textSize="18sp"
+        android:textColor="@color/primary_500"
+        android:layout_marginTop="12sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/greyscale_200" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hoặc"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/greyscale_700"
+                android:fontFamily="@font/baloopaaji2semibold"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/greyscale_200"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="12sp">
+
+            <ImageButton
+                android:id="@+id/imbFacebook"
+                android:layout_width="88dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_sign_in_link_to_app"
+                android:src="@drawable/ic_facebook"
+                android:layout_marginEnd="20dp"/>
+
+            <ImageButton
+                android:id="@+id/imbGoogle"
+                android:layout_width="88dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_sign_in_link_to_app"
+                android:src="@drawable/ic_google"
+                android:layout_marginEnd="20dp"/>
+
+            <ImageButton
+                android:id="@+id/imbApple"
+                android:layout_width="88dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_sign_in_link_to_app"
+                android:src="@drawable/ic_ios"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="24sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ba mẹ chưa có tài khoản? "
+                android:fontFamily="@font/baloopaaji2regular"
+                android:textColor="@color/greyscale_500"/>
+
+            <TextView
+                android:id="@+id/txtSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_DangKy"
+                android:fontFamily="@font/baloopaaji2semibold"
+                android:textColor="@color/primary_500"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
