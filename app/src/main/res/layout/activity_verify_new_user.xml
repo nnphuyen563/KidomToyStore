@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.VerifyNewUserActivity"
+    android:orientation="vertical"
+    android:padding="24dp">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký tài khoản"
+        android:textSize="24sp"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:textColor="@color/black"
+        android:paddingStart="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="3">
+
+
+        <TextView
+            android:id="@+id/txtSetPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mã OTP đã được gửi đến 0000****00"
+            android:textSize="18sp"
+            android:fontFamily="@font/baloopaaji2medium"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
+
+            <EditText
+                android:id="@+id/edtCode1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field_custom"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/baloopaaji2bold"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="3dp"/>
+
+            <EditText
+                android:id="@+id/edtCode2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field_custom"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/baloopaaji2bold"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="3dp"/>
+
+            <EditText
+                android:id="@+id/edtCode3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field_custom"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/baloopaaji2bold"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="3dp"/>
+
+            <EditText
+                android:id="@+id/edtCode4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field_custom"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/baloopaaji2bold"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="3dp"/>
+
+            <EditText
+                android:id="@+id/edtCode5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field_custom"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/baloopaaji2bold"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="3dp"/>
+
+            <EditText
+                android:id="@+id/edtCode6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field_custom"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/baloopaaji2bold"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ba mẹ chưa nhận được mã?"
+                android:textSize="18sp"
+                android:fontFamily="@font/baloopaaji2medium"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gửi lại"
+                android:textSize="18sp"
+                android:fontFamily="@font/baloopaaji2medium"
+                android:textColor="@color/primary_500"
+                android:paddingStart="5dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnVerification"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@null"
+            android:background="@drawable/button_disable"
+            android:text="Xác thực"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:fontFamily="@font/baloopaaji2bold"
+            android:layout_gravity="center_horizontal|center"/>
+    </LinearLayout>
+
+<!--    Add progress bar-->
+
+</LinearLayout>

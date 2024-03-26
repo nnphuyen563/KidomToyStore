@@ -1,12 +1,18 @@
 package com.group4.kidomtoystore.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Toast;
 
+import com.group4.kidomtoystore.R;
 import com.group4.kidomtoystore.databinding.ActivityRegisterBinding;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -24,6 +30,43 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void addEvents() {
+
+        binding.txtInputPhoneNumb.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(!TextUtils.isEmpty(binding.txtInputPhoneNumb.getText().toString()) && !TextUtils.isEmpty(binding.txtInputPassword.getText().toString())) {
+                    binding.btnSignUp.setBackground(ContextCompat.getDrawable(RegisterActivity.this, R.drawable.button_available));
+                }else{
+                    binding.btnSignUp.setBackgroundResource(R.drawable.button_disable);
+                }
+            }
+        });
+
+        binding.txtInputPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(!TextUtils.isEmpty(binding.txtInputPhoneNumb.getText().toString()) && !TextUtils.isEmpty(binding.txtInputPassword.getText().toString())) {
+                    binding.btnSignUp.setBackground(ContextCompat.getDrawable(RegisterActivity.this, R.drawable.button_available));
+                }else{
+                    binding.btnSignUp.setBackgroundResource(R.drawable.button_disable);
+                }
+            }
+        });
+
+
+
         binding.btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,8 +85,6 @@ public class RegisterActivity extends AppCompatActivity {
 
                     startActivity(intent);
                 }
-
-
             }
         });
 

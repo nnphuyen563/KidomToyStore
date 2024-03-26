@@ -85,7 +85,7 @@
         android:layout_marginBottom="20dp"
         android:inputType="date"
         android:drawableRight="@drawable/ic_calendar"
-        android:drawableTint="@color/greyscale_500"/>
+        android:drawableTint="@color/greyscale_500" />
 
 
     <Spinner
@@ -104,6 +104,7 @@
         android:gravity="center|bottom"
         android:orientation="vertical">
         <Button
+            android:id="@+id/btnContinue"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:backgroundTint="@null"

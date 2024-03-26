@@ -30,10 +30,7 @@
         android:layout_height="wrap_content"
         app:startIconDrawable="@drawable/ic_phone"
         app:startIconTint="@color/greyscale_500"
-        android:hint="@string/str_phone"
-        android:textColorHint="@color/greyscale_500"
-        android:fontFamily="@font/baloopaaji2regular"
-        android:textSize="19sp"
+        app:hintEnabled="false"
         app:boxStrokeWidth="0dp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -42,6 +39,8 @@
             android:layout_height="60dp"
             android:background="@drawable/input_field_custom"
             android:inputType="phone"
+            android:hint="Địa chỉ email"
+            android:textColorHint="@color/greyscale_500"
             android:textSize="19sp"
             android:fontFamily="@font/baloopaaji2regular"/>
 
@@ -52,12 +51,9 @@
         android:layout_height="wrap_content"
         app:startIconDrawable="@drawable/ic_password"
         app:startIconTint="@color/greyscale_500"
-        android:hint="@string/str_password"
-        android:textColorHint="@color/greyscale_500"
-        android:fontFamily="@font/baloopaaji2regular"
-        android:textSize="19sp"
         app:boxStrokeWidth="0dp"
-        android:layout_marginTop="20sp"
+        android:layout_marginTop="20dp"
+        app:hintEnabled="false"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/greyscale_500">
 
@@ -68,6 +64,8 @@
             android:background="@drawable/input_field_custom"
             android:inputType="textPassword"
             android:textSize="19sp"
+            android:hint="@string/str_password"
+            android:textColorHint="@color/greyscale_500"
             android:fontFamily="@font/baloopaaji2regular"/>
 
     </com.google.android.material.textfield.TextInputLayout>
