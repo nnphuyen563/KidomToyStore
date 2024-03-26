@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.OnboardingFragment3"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/cardview_light_background">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:src="@drawable/onboarding6"/>
+
+    <Button
+        android:id="@+id/btngetstart"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_available"
+        android:text="Đăng nhập với mật khẩu"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50sp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ba mẹ chưa có tài khoản? "
+            android:fontFamily="@font/baloopaaji2regular"
+            android:textColor="@color/greyscale_500"/>
+
+        <TextView
+            android:id="@+id/txtSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_DangKy"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:textColor="@color/primary_500"/>
+    </LinearLayout>
+
+
+</LinearLayout>
