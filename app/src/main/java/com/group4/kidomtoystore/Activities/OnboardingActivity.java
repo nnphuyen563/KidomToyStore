@@ -45,16 +45,16 @@ public class OnboardingActivity extends AppCompatActivity {
                 (tab, position) -> {
                     switch (position) {
                         case 0:
-                            tab.setText("Tab 1");
+                            tab.setIcon(R.drawable.button_available);
                             break;
                         case 1:
-                            tab.setText("Tab 2");
+                            tab.setIcon(R.drawable.button_available);
                             break;
                         case 2:
-                            tab.setText("Tab 3");
+                            tab.setIcon(R.drawable.button_available);
                             break;
                         case 3:
-                            tab.setText("Tab 4");
+                            tab.setIcon(R.drawable.button_available);
                             break;
                         default:
                             break;
