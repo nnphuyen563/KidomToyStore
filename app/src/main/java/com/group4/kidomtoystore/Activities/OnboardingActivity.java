@@ -1,11 +1,13 @@
 package com.group4.kidomtoystore.Activities;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.group4.kidomtoystore.Adapters.ViewPagerAdapter;
@@ -45,21 +47,19 @@ public class OnboardingActivity extends AppCompatActivity {
                 (tab, position) -> {
                     switch (position) {
                         case 0:
-                            tab.setIcon(R.drawable.button_available);
                             break;
                         case 1:
-                            tab.setIcon(R.drawable.button_available);
                             break;
                         case 2:
-                            tab.setIcon(R.drawable.button_available);
                             break;
-                        case 3:
-                            tab.setIcon(R.drawable.button_available);
+                        case 3:;
                             break;
                         default:
                             break;
                     }
                 }).attach();
+        Drawable indicatorDrawable = ContextCompat.getDrawable(this, R.drawable.button_available);
+        tabLayout.setSelectedTabIndicator(indicatorDrawable);
     }
 
     private void initUI(){
