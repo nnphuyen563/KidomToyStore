@@ -21,10 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="@color/greyscale_50"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginStart="5dp"
         android:weightSum="8">
 
         <ImageView
@@ -49,7 +46,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="88 Đường số 27,Gò Vấp, Hồ Chí Minh"
+                android:text="88 Đường số 27, Gò Vấp, Hồ Chí Minh"
                 android:fontFamily="@font/baloopaaji2medium"
                 android:textSize="14sp"
                 android:textColor="@color/greyscale_700"/>
@@ -68,10 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="@color/greyscale_50"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginStart="5dp"
         android:weightSum="8">
 
         <ImageView
@@ -114,10 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="@color/greyscale_50"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginStart="5dp"
         android:weightSum="8">
 
         <ImageView
@@ -154,6 +145,14 @@
             android:layout_gravity="center_vertical"
             android:src="@drawable/ic_edit"/>
     </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Thêm địa chỉ mới"
+        android:backgroundTint="@color/primary_500"
+        android:layout_gravity="end"/>
 
 
 </LinearLayout>

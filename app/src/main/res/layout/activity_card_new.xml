@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.CardNew"
+    android:padding="24dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm thẻ mới"
+        android:textSize="24sp"
+        android:textColor="@color/greyscale_900"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Chọn ngân hàng:"
+        android:textSize="18sp"
+        android:textColor="@color/greyscale_900"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:layout_gravity="center"/>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="3dp"
+        android:numColumns="4"/>
+
+</LinearLayout>

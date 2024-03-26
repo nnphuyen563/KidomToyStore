@@ -1,9 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.AddressNewActivity">
+    tools:context=".Activities.AddressNewActivity"
+    android:orientation="vertical"
+    android:padding="24dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm địa chỉ mới"
+        android:textSize="24sp"
+        android:textColor="@color/greyscale_900"
+        android:fontFamily="@font/baloopaaji2bold"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Họ tên"
+        android:layout_marginTop="18dp"
+        android:paddingStart="24dp"
+        android:textSize="14sp"
+        android:textColor="@color/greyscale_500"
+        android:fontFamily="@font/baloopaaji2regular"
+        android:backgroundTint="@color/greyscale_50"
+        android:layout_gravity="center_vertical"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số điện thoại"
+        android:layout_marginTop="18dp"
+        android:paddingStart="24dp"
+        android:textSize="14sp"
+        android:textColor="@color/greyscale_500"
+        android:fontFamily="@font/baloopaaji2regular"
+        android:backgroundTint="@color/greyscale_50"
+        android:layout_gravity="center_vertical"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tỉnh/ Thành phố"
+        android:layout_marginTop="18dp"
+        android:paddingStart="24dp"
+        android:textSize="14sp"
+        android:textColor="@color/greyscale_500"
+        android:fontFamily="@font/baloopaaji2regular"
+        android:backgroundTint="@color/greyscale_50"
+        android:layout_gravity="center_vertical"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên đường, tòa nhà, số nhà"
+        android:layout_marginTop="18dp"
+        android:paddingStart="24dp"
+        android:textSize="14sp"
+        android:textColor="@color/greyscale_500"
+        android:fontFamily="@font/baloopaaji2regular"
+        android:backgroundTint="@color/greyscale_50"
+        android:layout_gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:gravity="center_vertical"
+            android:layout_weight="3"
+            android:backgroundTint="@color/greyscale_50"
+            android:fontFamily="@font/baloopaaji2regular"
+            android:paddingStart="24dp"
+            android:text="Loại địa chỉ"
+            android:textColor="@color/greyscale_900"
+            android:textSize="14sp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:text="Văn phòng"
+            android:textSize="14sp"
+            android:textColor="@color/greyscale_900"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/greyscale_200"
+            android:fontFamily="@font/baloopaaji2regular" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:text="Nhà riêng"
+            android:textSize="14sp"
+            android:textColor="@color/greyscale_900"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/greyscale_200"
+            android:fontFamily="@font/baloopaaji2regular"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:hint="Đặt làm địa chỉ mặc định"
+        android:gravity="center_vertical"
+        android:layout_marginTop="18dp"
+        android:paddingStart="24dp"
+        android:textSize="14sp"
+        android:textColor="@color/greyscale_900"
+        android:fontFamily="@font/baloopaaji2regular"
+        android:backgroundTint="@color/greyscale_50"
+        android:layout_gravity="center_vertical"/>
+
+
+
+
+
+
+
+</LinearLayout>

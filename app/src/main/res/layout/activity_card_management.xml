@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.CardManagement"
+    android:padding="24dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thẻ thanh toán"
+        android:textSize="24sp"
+        android:textColor="@color/greyscale_900"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/greyscale_50"
+        android:layout_marginStart="5dp"
+        android:weightSum="10">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.5"
+            android:src="@drawable/icon_vietcombank"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="3.5"
+            android:text="Vietcombank"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:layout_weight="5"
+            android:text="9999999999"
+            android:gravity="center_vertical"
+            android:textAlignment="textEnd"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/greyscale_50"
+        android:layout_marginStart="5dp"
+        android:weightSum="10">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.5"
+            android:src="@drawable/icon_mbbabk"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="3.5"
+            android:text="MBbank"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:layout_weight="5"
+            android:text="9999999989999"
+            android:gravity="center_vertical"
+            android:textAlignment="textEnd"
+            android:fontFamily="@font/baloopaaji2semibold"
+            android:textSize="18sp"
+            android:textColor="@color/greyscale_900"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Thêm thẻ mới"
+        android:backgroundTint="@color/primary_500"
+        android:layout_gravity="end"/>
+
+
+
+
+</LinearLayout>
