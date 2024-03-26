@@ -7,133 +7,365 @@
     tools:context=".Activities.HomePageFull"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="@color/white"
+    android:background="@drawable/img_bg_blur5"
     >
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginBottom="16dp">
-        <androidx.cardview.widget.CardView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            app:cardCornerRadius="100dp"
-            android:layout_gravity="center_vertical">
-            <ImageView
-                android:id="@+id/imvAvatar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/img_avatar"
-                />
-        </androidx.cardview.widget.CardView>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="16sp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Chào buổi sáng"
-                android:fontFamily="@font/baloopaaji2medium"
-                android:textSize="16sp"
-                android:textColor="@color/greyscale_600"
-                android:gravity="center_vertical"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Nguyễn Anh Tuấn"
-                android:fontFamily="@font/baloopaaji2medium"
-                android:textSize="20sp"
-                android:textColor="@color/greyscale_900"
-                />
-
-
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_fieldhome"
             android:orientation="horizontal"
-            android:layout_marginStart="16dp"
-            android:gravity="right">
-            <ImageView
-                android:layout_width="17.22dp"
-                android:layout_height="22.27dp"
-                android:src="@drawable/ic_ring"
-                android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            >
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="@font/baloopaaji2regular"
+                android:layout_weight="1"
+                android:hint="Nhập ngay mã BANMOI để giảm 10%"
+                android:lineBreakWordStyle="none"
+                android:padding="12sp"
+                android:backgroundTint="@android:color/transparent"
                 />
             <ImageView
-                android:layout_width="22.16dp"
-                android:layout_height="19.8dp"
-                android:src="@drawable/ic_heart"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="16dp"
+                android:id="@+id/imvSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_search"
                 />
-
-
+            <ImageView
+                android:id="@+id/imvFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_filter"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                />
         </LinearLayout>
-
+        <ImageView
+            android:layout_width="19.22dp"
+            android:layout_height="24.27dp"
+            android:src="@drawable/ic_ring"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center"
+            />
 
 
     </LinearLayout>
 
 
-    <LinearLayout
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBanner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/input_field"
-        android:orientation="horizontal"
-        android:layout_marginBottom="24dp"
-        >
-        <EditText
-            android:id="@+id/edtSearch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:fontFamily="@font/baloopaaji2regular"
-            android:layout_weight="1"
-            android:hint="Nhập ngay mã BANMOI để giảm 10%"
-            android:lineBreakWordStyle="none"
-            android:padding="21sp"
-            android:backgroundTint="@android:color/transparent"
-            />
-        <ImageView
-            android:id="@+id/imvSearch"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_search"
-            />
-        <ImageView
-            android:id="@+id/imvFilter"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_filter"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="15dp"
-            />
-    </LinearLayout>
-<!--    <GridView-->
-<!--        android:id="@+id/gvCategory"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:numColumns="5"-->
-<!--        android:layout_marginTop="10sp"-->
-<!--        android:layout_marginBottom="10sp"/>-->
+        />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
         />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvBanner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:layout_marginBottom="10sp"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/img_bg_flashsale3"
+            android:paddingTop="70dp"
+            android:weightSum="3"
+            android:paddingBottom="10dp"
+        android:paddingHorizontal="10dp"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16sp"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img_category_hoatrang"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bộ đồ chơi Kendama"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/baloopaaji2bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_star"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.8"
+                            android:fontFamily="@font/baloopaaji2medium"
+                            android:textSize="14sp"
+                            android:layout_marginStart="12dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="|"
+                            android:fontFamily="@font/baloopaaji2medium"
+                            android:textSize="14sp"
+                            android:layout_marginStart="12dp"/>
 
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:background="@drawable/button_border_new"
+                            android:layout_marginStart="12sp"
+
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1234"
+                                android:fontFamily="@font/baloopaaji2semibold"
+                                android:textSize="10sp"
+                                android:layout_gravity="center_vertical"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Đã bán"
+                                android:fontFamily="@font/baloopaaji2semibold"
+                                android:textSize="10sp"
+                                android:layout_marginStart="4dp"
+                                android:layout_gravity="center_vertical"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="182000đ"
+                        android:fontFamily="@font/baloopaaji2semibold"
+                        android:textSize="18dp"
+                        android:textColor="@color/primary_500"/>
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16sp"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:id="@+id/imvProductThumb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img_category_hoatrang"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:id="@+id/txtProductName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bộ đồ chơi Kendama"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/baloopaaji2bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_star"/>
+                        <TextView
+                            android:id="@+id/txtStarNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.8"
+                            android:fontFamily="@font/baloopaaji2medium"
+                            android:textSize="14sp"
+                            android:layout_marginStart="12dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="|"
+                            android:fontFamily="@font/baloopaaji2medium"
+                            android:textSize="14sp"
+                            android:layout_marginStart="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:background="@drawable/button_border_new"
+                            android:layout_marginStart="12sp"
+
+                            >
+                            <TextView
+                                android:id="@+id/txtSoldNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1234"
+                                android:fontFamily="@font/baloopaaji2semibold"
+                                android:textSize="10sp"
+                                android:layout_gravity="center_vertical"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Đã bán"
+                                android:fontFamily="@font/baloopaaji2semibold"
+                                android:textSize="10sp"
+                                android:layout_marginStart="4dp"
+                                android:layout_gravity="center_vertical"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/txtPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="182000đ"
+                        android:fontFamily="@font/baloopaaji2semibold"
+                        android:textSize="18dp"
+                        android:textColor="@color/primary_500"/>
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16sp"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img_category_hoatrang"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bộ đồ chơi Kendama"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/baloopaaji2bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_star"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.8"
+                            android:fontFamily="@font/baloopaaji2medium"
+                            android:textSize="14sp"
+                            android:layout_marginStart="12dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="|"
+                            android:fontFamily="@font/baloopaaji2medium"
+                            android:textSize="14sp"
+                            android:layout_marginStart="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:background="@drawable/button_border_new"
+                            android:layout_marginStart="12sp"
+
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1234"
+                                android:fontFamily="@font/baloopaaji2semibold"
+                                android:textSize="10sp"
+                                android:layout_gravity="center_vertical"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Đã bán"
+                                android:fontFamily="@font/baloopaaji2semibold"
+                                android:textSize="10sp"
+                                android:layout_marginStart="4dp"
+                                android:layout_gravity="center_vertical"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="182000đ"
+                        android:fontFamily="@font/baloopaaji2semibold"
+                        android:textSize="18dp"
+                        android:textColor="@color/primary_500"/>
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

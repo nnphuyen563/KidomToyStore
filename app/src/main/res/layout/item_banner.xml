@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:gravity="center">
+    >
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,7 +13,8 @@
             android:id="@+id/imvBanner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/img_banner" />
+            android:src="@drawable/img_bannerhome4"
+            android:background="@null"/>
     </androidx.cardview.widget.CardView>
 
 

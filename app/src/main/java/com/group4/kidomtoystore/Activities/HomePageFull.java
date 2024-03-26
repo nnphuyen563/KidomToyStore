@@ -44,7 +44,7 @@ public class HomePageFull extends AppCompatActivity {
 //        binding.rvCategory.setHasFixedSize(true);
         LinearLayoutManager layoutManager2 = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         binding.rvBanner.setLayoutManager(layoutManager2);
-        binding.rvBanner.setHasFixedSize(true);
+//        binding.rvBanner.setHasFixedSize(true);
     }
 
     private void initData() {
@@ -58,6 +58,7 @@ public class HomePageFull extends AppCompatActivity {
 
 
         bannerLists = new ArrayList<>();
+        bannerLists.add(new BannerHome(R.drawable.img_bannerhome4));
         bannerLists.add(new BannerHome(R.drawable.img_banner));
         bannerLists.add(new BannerHome(R.drawable.img_banner_goc));
 
