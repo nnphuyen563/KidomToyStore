@@ -5,6 +5,7 @@ import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.group4.kidomtoystore.R;
 import com.group4.kidomtoystore.databinding.ActivitySignUpBinding;
@@ -40,9 +42,45 @@ public class SignUpActivity extends AppCompatActivity {
         binding = ActivitySignUpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
         loadGenderData();
+        getData();
         addEvents();
+    }
+    private void getData() {
+        Intent intent = getIntent();
+
+        String phone = intent.getStringExtra("phone");
+        String pass = intent.getStringExtra("pass");
+
+        binding.edtPhone.setText(phone);
+    }
+    private boolean validateName() {
+        String name = binding.edtFullName.getText().toString().trim();
+        if (name.isEmpty()) {
+            Toast.makeText(SignUpActivity.this, "Họ và tên không đúng định dạng", Toast.LENGTH_SHORT).show();
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    private boolean validatePhone() {
+        String phone = binding.edtPhone.getText().toString().trim();
+        if(phone.isEmpty() || phone.length() < 10 || phone.substring(0,1) == "0") {
+            Toast.makeText(SignUpActivity.this, "Số điện thoại không đúng định dạng", Toast.LENGTH_SHORT).show();
+            return false;
+        }else {
+            return true;
+        }
+    }
+
+    private boolean validateEmail() {
+        String checkMail = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";
+        String email = binding.edtEmail.getText().toString().trim();
+        if(email.isEmpty() || email.matches(checkMail)) {
+//            Toast.makeText(SignUpActivity.this, )
+        }
+        return true;
     }
 
     private void loadGenderData() {
@@ -77,4 +115,6 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

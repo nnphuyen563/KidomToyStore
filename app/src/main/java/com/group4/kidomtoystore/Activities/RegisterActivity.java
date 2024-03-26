@@ -21,24 +21,33 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         addEvents();
-        getInfor();
     }
 
     private void addEvents() {
         binding.btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phoneNumb = binding.txtInputPhoneNumb.getText().toString();
-                String password = binding.txtInputPassword.getText().toString();
+                String phoneNumb = binding.txtInputPhoneNumb.getText().toString().trim();
+                String password = binding.txtInputPassword.getText().toString().trim();
 
-                if (password.length() < 6 ) {
-                    Toast.makeText(RegisterActivity.this, "Mật khẩu có ít nhất 6 ký tự", Toast.LENGTH_SHORT).show();
+                if(phoneNumb.length() < 10 || phoneNumb.substring(0, 1) == "0") {
+                    Toast.makeText(RegisterActivity.this, "Số điện thoại không đúng định dạng!", Toast.LENGTH_SHORT).show();
+                }else if(password.length() < 6 ) {
+                    Toast.makeText(RegisterActivity.this, "Mật khẩu có ít nhất 6 ký tự!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent intent = new Intent(RegisterActivity.this, SignUpActivity.class);
+
+                    intent.putExtra("phone", phoneNumb);
+                    intent.putExtra("pass", password);
+
+                    startActivity(intent);
                 }
+
 
             }
         });
 
-        binding.txtSignUp.setOnClickListener(new View.OnClickListener() {
+        binding.txtLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
@@ -47,6 +56,4 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    private void getInfor() {
-    }
 }
