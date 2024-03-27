@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "169893859513",
+    "project_id": "kidomtoystore",
+    "storage_bucket": "kidomtoystore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169893859513:android:ddd5a2734fa7beb0094b68",
+        "android_client_info": {
+          "package_name": "com.group4.kidomtoystore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmEo66oF_89_8NGmqDsS1fIzSTFg-gx6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

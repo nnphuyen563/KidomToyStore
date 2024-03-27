@@ -26,7 +26,7 @@
 
 
         <TextView
-            android:id="@+id/txtSetPhone"
+            android:id="@+id/txtSetEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Mã OTP đã được gửi đến 0000****00"

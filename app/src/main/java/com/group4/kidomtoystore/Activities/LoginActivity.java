@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
             }
             @Override
             public void afterTextChanged(Editable editable) {
-                if(!TextUtils.isEmpty(binding.txtInputPhoneNumb.getText().toString()) && !TextUtils.isEmpty(binding.txtInputPassword.getText().toString())) {
+                if(!TextUtils.isEmpty(binding.txtInputEmail.getText().toString()) && !TextUtils.isEmpty(binding.txtInputPassword.getText().toString())) {
                     binding.btnLogIn.setBackground(ContextCompat.getDrawable(LoginActivity.this, R.drawable.button_available));
                 }else{
                     binding.btnLogIn.setBackgroundResource(R.drawable.button_disable);
@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
             }
             @Override
             public void afterTextChanged(Editable editable) {
-                if(!TextUtils.isEmpty(binding.txtInputPhoneNumb.getText().toString()) && !TextUtils.isEmpty(binding.txtInputPassword.getText().toString())) {
+                if(!TextUtils.isEmpty(binding.txtInputEmail.getText().toString()) && !TextUtils.isEmpty(binding.txtInputPassword.getText().toString())) {
                     binding.btnLogIn.setBackground(ContextCompat.getDrawable(LoginActivity.this, R.drawable.button_available));
                 }else{
                     binding.btnLogIn.setBackgroundResource(R.drawable.button_disable);
@@ -73,39 +73,21 @@ public class LoginActivity extends AppCompatActivity {
         binding.btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phoneNumb = binding.txtInputPhoneNumb.getText().toString().trim();
+                String email = binding.txtInputEmail.getText().toString().trim();
                 String password = binding.txtInputPassword.getText().toString().trim();
+                String checkMail = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";
 
-                if(phoneNumb.length() < 10 || phoneNumb.substring(0, 1) == "0") {
-                    Toast.makeText(LoginActivity.this, "Số điện thoại không đúng định dạng!", Toast.LENGTH_SHORT).show();
-                }else if(password.length() < 6 ) {
+                if(email.isEmpty() || !email.matches(checkMail)) {
+                    Toast.makeText(LoginActivity.this, "Email không hợp lệ!", Toast.LENGTH_SHORT).show();
+                }else if (password.length() < 6 ) {
                     Toast.makeText(LoginActivity.this, "Mật khẩu có ít nhất 6 ký tự!", Toast.LENGTH_SHORT).show();
                 }else{
-                    PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                            "+84" + phoneNumb, 60, TimeUnit.SECONDS, LoginActivity.this, new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                                @Override
-                                public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                    Intent intent = new Intent(LoginActivity.this, VerifyNewUserActivity.class);
 
-                                }
+                    intent.putExtra("email", email);
+                    intent.putExtra("pass", password);
 
-                                @Override
-                                public void onVerificationFailed(@NonNull FirebaseException e) {
-
-                                }
-
-                                @Override
-                                public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                                    Intent intent = new Intent(LoginActivity.this, VerifyNewUserActivity.class);
-                                    intent.putExtra("phone", phoneNumb);
-                                    intent.putExtra("pass", password);
-                                    intent.putExtra("verificationid", s);
-                                    startActivity(intent);
-                                }
-                            }
-                    );
-
-
-
+                    startActivity(intent);
                 }
             }
         });

@@ -28,10 +28,10 @@ public class VerifyNewUserActivity extends AppCompatActivity {
 
     private void getData() {
         Intent intent = getIntent();
-        String phone = intent.getStringExtra("phone");
+        String email = intent.getStringExtra("email");
         String pass = intent.getStringExtra("pass");
 
-        binding.txtSetPhone.setText("Mã OTP đã được gửi đến " + phone);
+        binding.txtSetEmail.setText("Mã OTP đã được gửi đến " + email);
     }
 
     private void setUpOTPInputs() {

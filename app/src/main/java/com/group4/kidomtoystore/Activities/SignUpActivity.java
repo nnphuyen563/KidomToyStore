@@ -1,5 +1,6 @@
 package com.group4.kidomtoystore.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -16,6 +17,10 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.group4.kidomtoystore.R;
 import com.group4.kidomtoystore.databinding.ActivitySignUpBinding;
 
@@ -38,6 +43,10 @@ public class SignUpActivity extends AppCompatActivity {
     ArrayAdapter<String> genderAdapter;
     ArrayList<String> genderData;
 
+    FirebaseAuth fAuth;
+
+    Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,16 +59,14 @@ public class SignUpActivity extends AppCompatActivity {
         addEvents();
     }
     private void getData() {
-        Intent intent = getIntent();
+        intent = getIntent();
 
-        String phone = intent.getStringExtra("phone");
-        String pass = intent.getStringExtra("pass");
-
-        binding.edtPhone.setText(phone);
+        String email = intent.getStringExtra("email");
+        binding.edtEmail.setText(email);
     }
     private boolean validateName(String name) {
         if (name.isEmpty()) {
-            Toast.makeText(SignUpActivity.this, "Họ và tên không đúng định dạng", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignUpActivity.this, "Họ và tên không đúng định dạng!", Toast.LENGTH_SHORT).show();
             return false;
         }else{
             return true;
@@ -68,7 +75,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private boolean validatePhone(String phone) {
         if(phone.isEmpty() || phone.length() < 10 || phone.substring(0,1) == "0") {
-            Toast.makeText(SignUpActivity.this, "Số điện thoại không đúng định dạng", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignUpActivity.this, "Số điện thoại không đúng định dạng!", Toast.LENGTH_SHORT).show();
             return false;
         }else{
             return true;
@@ -78,7 +85,7 @@ public class SignUpActivity extends AppCompatActivity {
     private boolean validateEmail(String email) {
         String checkMail = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";
         if(email.isEmpty() || email.matches(checkMail)) {
-            Toast.makeText(SignUpActivity.this, "Email không đúng định dạng", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignUpActivity.this, "Email không đúng định dạng!", Toast.LENGTH_SHORT).show();
             return false;
         }else{
             return true;
@@ -122,6 +129,7 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
 
+                String pass = intent.getStringExtra("pass");
                 String name = binding.edtFullName.getText().toString().trim();
                 String phone = binding.edtPhone.getText().toString().trim();
                 String email = binding.edtEmail.getText().toString().trim();
@@ -134,11 +142,17 @@ public class SignUpActivity extends AppCompatActivity {
                 }
 
                 if(validateName(name) || validateEmail(phone) || validatePhone(email)) {
-                    Intent intent = new Intent(SignUpActivity.this, VerifyNewUserActivity.class);
+                    fAuth = FirebaseAuth.getInstance();
+                    fAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful())
+                        }
+                    };
 
 
 
-
+                    intent = new Intent(SignUpActivity.this, VerifyNewUserActivity.class);
                     startActivity(intent);
                 }
             }

@@ -34,11 +34,11 @@
         app:boxStrokeWidth="0dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtInputPhoneNumb"
+            android:id="@+id/txtInputEmail"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/input_field_custom"
-            android:inputType="phone"
+            android:inputType="textEmailAddress"
             android:hint="Địa chỉ email"
             android:textColorHint="@color/greyscale_500"
             android:textSize="19sp"
