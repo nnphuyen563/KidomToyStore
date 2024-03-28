@@ -80,6 +80,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Mật khẩu có ít nhất 6 ký tự!", Toast.LENGTH_SHORT).show();
                     binding.txtInputPassword.requestFocus();
                 }else{
+
                     Intent intent = new Intent(RegisterActivity.this, SignUpActivity.class);
 
                     intent.putExtra("email", email);

@@ -18,6 +18,7 @@ import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.style.TypefaceSpan;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +32,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.group4.kidomtoystore.Models.User;
@@ -56,8 +62,9 @@ public class SignUpActivity extends AppCompatActivity {
     ArrayList<String> genderData;
     FirebaseDatabase database;
     DatabaseReference reference;
-    FirebaseAuth fAuth;
+    FirebaseAuth auth;
     Intent intent;
+    public static final String TAG = "RegisterActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,12 +93,14 @@ public class SignUpActivity extends AppCompatActivity {
     private void loadGenderData() {
         String [] genders ={"Nữ", "Nam", "Khác"};
         genderData = new ArrayList<>(Arrays.asList(genders));
-        genderAdapter = new ArrayAdapter<String>(SignUpActivity.this, android.R.layout.simple_spinner_dropdown_item, genderData);
+        genderAdapter = new ArrayAdapter<String>(SignUpActivity.this, R.layout.spinner_item, genderData);
 //        genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spGender.setAdapter(genderAdapter);
     }
 
     private void addEvents() {
+
+        //set Calendar
         binding.edtDOB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,7 +124,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-
+        //set button change color
         binding.edtFullName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -204,7 +213,7 @@ public class SignUpActivity extends AppCompatActivity {
                 String gender = binding.spGender.getSelectedItem().toString();
                 String dob = binding.edtDOB.getText().toString().trim();
 
-
+                //validate
                 if(TextUtils.isEmpty(name)) {
                     Toast.makeText(SignUpActivity.this, "Nhập tên của ba mẹ", Toast.LENGTH_SHORT).show();
                     binding.edtFullName.setError("Không được bỏ trống");
@@ -221,9 +230,9 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Nhập sinh nhật của ba mẹ", Toast.LENGTH_SHORT).show();
                     binding.edtDOB.setError("Không được bỏ trống");
                     binding.edtDOB.requestFocus();
-                }else if(phone.length() < 10 || phone.substring(0,1) != "0") {
+                }else if(phone.length() < 10 || !phone.substring(0,1).equals("0")) {
                     Toast.makeText(SignUpActivity.this, "Số điện thoại sai định dạng", Toast.LENGTH_SHORT).show();
-                    binding.edtPhone.setError("Không được bỏ trống");
+                    binding.edtPhone.setError("Sai định dạng");
                     binding.edtPhone.requestFocus();
                 }else{
                     binding.progressbar.setVisibility(View.VISIBLE);
@@ -234,7 +243,66 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void registerUser(String name, String email, String phone, String dob, String gender, String pass) {
+        auth = FirebaseAuth.getInstance();
 
+        //Create user profile
+        auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(SignUpActivity.this,
+                new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+
+                            FirebaseUser firebaseUser = auth.getCurrentUser();
+
+                            UserProfileChangeRequest profileChangeRequest = new UserProfileChangeRequest.Builder().setDisplayName(name).build();
+                            firebaseUser.updateProfile(profileChangeRequest);
+
+                            //Enter user data into the Firebase Realtime Database
+                            User user = new User(phone, email, dob, gender);
+
+                            //extract user reference from Database for registered user
+                            reference = FirebaseDatabase.getInstance().getReference("Registered Users");
+                            reference.child(firebaseUser.getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+
+                                    if(task.isSuccessful()) {
+                                        firebaseUser.sendEmailVerification();
+                                        Toast.makeText(SignUpActivity.this, "Để hoàn tất đăng ký, ba mẹ vui lòng xác thực lại email", Toast.LENGTH_SHORT).show();
+
+                                        //Open Login screen after successfull registeration
+                                        intent = new Intent(SignUpActivity.this, MainActivity.class);
+                                        //prevent user from returning back to Register Activity on pressing back button after registration
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+                                                | Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                                | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                        startActivity(intent);
+                                        finish();
+                                    }else{
+                                        Toast.makeText(SignUpActivity.this, "Đăng ký thất bại. Ba mẹ vui lòng đăng ký lại!", Toast.LENGTH_SHORT).show();
+                                        binding.progressbar.setVisibility(View.GONE);
+                                    }
+                                }
+                            });
+
+                        }else{
+                            try {
+                                throw task.getException();
+                            } catch (FirebaseAuthInvalidCredentialsException e) {
+                                binding.edtEmail.setError("Email của ba mẹ không hợp lệ hoặc đã tồn tại. Vui lòng nhập email khác");
+                                binding.edtEmail.requestFocus();
+                            } catch (FirebaseAuthUserCollisionException e) {
+                                binding.edtEmail.setError("Email của ba mẹ không hợp lệ hoặc đã tồn tại. Vui lòng nhập email khác");
+                                binding.edtEmail.requestFocus();
+                            } catch (Exception e) {
+                                Log.e(TAG, e.getMessage());
+                                Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                            }
+                        }
+                        binding.progressbar.setVisibility(View.GONE);
+
+                    }
+                });
     }
 
 

@@ -28,7 +28,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconDrawable="@drawable/ic_email"
         app:startIconTint="@color/greyscale_500"
         app:boxStrokeWidth="0dp"
         app:hintEnabled="false">

@@ -3,46 +3,16 @@ package com.group4.kidomtoystore.Models;
 import java.util.Date;
 
 public class User {
-    Integer avatar;
-    String fullName;
     String phoneNumb;
     String email;
-    Date dob;
+    String dob;
     String gender;
-    String password;
 
-    public User(Integer avatar, String fullName, String phoneNumb, String email, Date dob, String gender, String password) {
-        this.avatar = avatar;
-        this.fullName = fullName;
+    public User(String phoneNumb, String email, String dob, String gender) {
         this.phoneNumb = phoneNumb;
         this.email = email;
         this.dob = dob;
         this.gender = gender;
-        this.password = password;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Integer getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(Integer avatar) {
-        this.avatar = avatar;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
     }
 
     public String getPhoneNumb() {
@@ -61,11 +31,11 @@ public class User {
         this.email = email;
     }
 
-    public Date getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
 
