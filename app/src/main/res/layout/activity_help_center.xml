@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.HelpCenterActivity">
+    tools:context=".Activities.HelpCenterActivity"
+    android:padding="24dp"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trung tâm hỗ trợ"
+        android:fontFamily="@font/baloopaaji2bold"
+        android:textSize="24sp"
+        android:textColor="@color/greyscale_900"
+        android:layout_marginBottom="24dp"/>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tlHelpCenter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabIndicatorGravity="stretch"
+        app:tabSelectedTextColor="@color/primary_500"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicator="@drawable/tab_indicator"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp2HelpCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+
+
+</LinearLayout>

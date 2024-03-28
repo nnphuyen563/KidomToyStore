@@ -7,4 +7,6 @@
     <string name="str_signup">Đăng ký tài khoản</string>
     <string name="str_DangKy">Đăng ký</string>
     <string name="str_email">Email</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
