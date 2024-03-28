@@ -75,8 +75,10 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if(email.isEmpty() || !email.matches(checkMail)) {
                     Toast.makeText(RegisterActivity.this, "Email không hợp lệ!", Toast.LENGTH_SHORT).show();
+                    binding.txtInputEmail.requestFocus();
                 }else if (password.length() < 6 ) {
                     Toast.makeText(RegisterActivity.this, "Mật khẩu có ít nhất 6 ký tự!", Toast.LENGTH_SHORT).show();
+                    binding.txtInputPassword.requestFocus();
                 }else{
                     Intent intent = new Intent(RegisterActivity.this, SignUpActivity.class);
 

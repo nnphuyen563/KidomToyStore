@@ -1,7 +1,9 @@
 package com.group4.kidomtoystore.Activities;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
@@ -10,6 +12,14 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.text.style.TypefaceSpan;
+import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,6 +31,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.group4.kidomtoystore.Models.User;
 import com.group4.kidomtoystore.R;
 import com.group4.kidomtoystore.databinding.ActivitySignUpBinding;
 
@@ -38,13 +51,12 @@ public class SignUpActivity extends AppCompatActivity {
 
     ActivitySignUpBinding binding;
     DatePickerDialog datePickerDialog;
-
     //Set gender
     ArrayAdapter<String> genderAdapter;
     ArrayList<String> genderData;
-
+    FirebaseDatabase database;
+    DatabaseReference reference;
     FirebaseAuth fAuth;
-
     Intent intent;
 
     @Override
@@ -54,42 +66,21 @@ public class SignUpActivity extends AppCompatActivity {
         binding = ActivitySignUpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
         loadGenderData();
+        uploadProfileImage();
         getData();
         addEvents();
     }
+
     private void getData() {
         intent = getIntent();
 
         String email = intent.getStringExtra("email");
         binding.edtEmail.setText(email);
     }
-    private boolean validateName(String name) {
-        if (name.isEmpty()) {
-            Toast.makeText(SignUpActivity.this, "Họ và tên không đúng định dạng!", Toast.LENGTH_SHORT).show();
-            return false;
-        }else{
-            return true;
-        }
-    }
 
-    private boolean validatePhone(String phone) {
-        if(phone.isEmpty() || phone.length() < 10 || phone.substring(0,1) == "0") {
-            Toast.makeText(SignUpActivity.this, "Số điện thoại không đúng định dạng!", Toast.LENGTH_SHORT).show();
-            return false;
-        }else{
-            return true;
-        }
-    }
-
-    private boolean validateEmail(String email) {
-        String checkMail = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";
-        if(email.isEmpty() || email.matches(checkMail)) {
-            Toast.makeText(SignUpActivity.this, "Email không đúng định dạng!", Toast.LENGTH_SHORT).show();
-            return false;
-        }else{
-            return true;
-        }
+    private void uploadProfileImage() {
     }
 
     private void loadGenderData() {
@@ -124,39 +115,126 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
+
+        binding.edtFullName.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(!TextUtils.isEmpty(binding.edtFullName.getText().toString()) && !TextUtils.isEmpty(binding.edtDOB.getText().toString()) && !TextUtils.isEmpty(binding.edtPhone.getText().toString()) && !TextUtils.isEmpty(binding.edtEmail.getText().toString())) {
+                    binding.btnContinue.setBackground(ContextCompat.getDrawable(SignUpActivity.this, R.drawable.button_available));
+                }else{
+                    binding.btnContinue.setBackgroundResource(R.drawable.button_disable);
+                }
+            }
+        });
+        binding.edtEmail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(!TextUtils.isEmpty(binding.edtFullName.getText().toString()) && !TextUtils.isEmpty(binding.edtDOB.getText().toString()) && !TextUtils.isEmpty(binding.edtPhone.getText().toString()) && !TextUtils.isEmpty(binding.edtEmail.getText().toString())) {
+                    binding.btnContinue.setBackground(ContextCompat.getDrawable(SignUpActivity.this, R.drawable.button_available));
+                }else{
+                    binding.btnContinue.setBackgroundResource(R.drawable.button_disable);
+                }
+            }
+        });
+        binding.edtDOB.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(!TextUtils.isEmpty(binding.edtFullName.getText().toString()) && !TextUtils.isEmpty(binding.edtDOB.getText().toString()) && !TextUtils.isEmpty(binding.edtPhone.getText().toString()) && !TextUtils.isEmpty(binding.edtEmail.getText().toString())) {
+                    binding.btnContinue.setBackground(ContextCompat.getDrawable(SignUpActivity.this, R.drawable.button_available));
+                }else{
+                    binding.btnContinue.setBackgroundResource(R.drawable.button_disable);
+                }
+            }
+        });
+        binding.edtPhone.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(!TextUtils.isEmpty(binding.edtFullName.getText().toString()) && !TextUtils.isEmpty(binding.edtDOB.getText().toString()) && !TextUtils.isEmpty(binding.edtPhone.getText().toString()) && !TextUtils.isEmpty(binding.edtEmail.getText().toString())) {
+                    binding.btnContinue.setBackground(ContextCompat.getDrawable(SignUpActivity.this, R.drawable.button_available));
+                }else{
+                    binding.btnContinue.setBackgroundResource(R.drawable.button_disable);
+                }
+            }
+        });
+
+
         binding.btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
 
+                intent = getIntent();
                 String pass = intent.getStringExtra("pass");
+
+                Integer ava = binding.imvAvatar.getImageAlpha();
                 String name = binding.edtFullName.getText().toString().trim();
                 String phone = binding.edtPhone.getText().toString().trim();
                 String email = binding.edtEmail.getText().toString().trim();
                 String gender = binding.spGender.getSelectedItem().toString();
-
-                try {
-                    Date dob = sdf.parse(binding.edtDOB.getText().toString().trim());
-                } catch (ParseException e) {
-                    throw new RuntimeException(e);
-                }
-
-                if(validateName(name) || validateEmail(phone) || validatePhone(email)) {
-                    fAuth = FirebaseAuth.getInstance();
-                    fAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful())
-                        }
-                    };
+                String dob = binding.edtDOB.getText().toString().trim();
 
 
-
-                    intent = new Intent(SignUpActivity.this, VerifyNewUserActivity.class);
-                    startActivity(intent);
+                if(TextUtils.isEmpty(name)) {
+                    Toast.makeText(SignUpActivity.this, "Nhập tên của ba mẹ", Toast.LENGTH_SHORT).show();
+                    binding.edtFullName.setError("Không được bỏ trống");
+                    binding.edtFullName.requestFocus();
+                }else if(TextUtils.isEmpty(phone)){
+                    Toast.makeText(SignUpActivity.this, "Nhập số điện thoại của ba mẹ", Toast.LENGTH_SHORT).show();
+                    binding.edtPhone.setError("Không được bỏ trống");
+                    binding.edtPhone.requestFocus();
+                }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    Toast.makeText(SignUpActivity.this, "Nhập địa chỉ email của ba mẹ", Toast.LENGTH_SHORT).show();
+                    binding.edtEmail.setError("Không được bỏ trống");
+                    binding.edtEmail.requestFocus();
+                }else if(TextUtils.isEmpty(dob)) {
+                    Toast.makeText(SignUpActivity.this, "Nhập sinh nhật của ba mẹ", Toast.LENGTH_SHORT).show();
+                    binding.edtDOB.setError("Không được bỏ trống");
+                    binding.edtDOB.requestFocus();
+                }else if(phone.length() < 10 || phone.substring(0,1) != "0") {
+                    Toast.makeText(SignUpActivity.this, "Số điện thoại sai định dạng", Toast.LENGTH_SHORT).show();
+                    binding.edtPhone.setError("Không được bỏ trống");
+                    binding.edtPhone.requestFocus();
+                }else{
+                    binding.progressbar.setVisibility(View.VISIBLE);
+                    registerUser(name, email, phone, dob, gender, pass);
                 }
             }
         });
+    }
+
+    private void registerUser(String name, String email, String phone, String dob, String gender, String pass) {
+
     }
 
 
