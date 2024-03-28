@@ -124,6 +124,7 @@
             android:layout_height="70dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
+            android:indeterminateDrawable="@drawable/my_progress_indeterminate"
             android:visibility="gone"/>
 
         <Button
